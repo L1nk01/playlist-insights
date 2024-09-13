@@ -1,5 +1,111 @@
+/* Estilos generales */
 body {
-    font-family: 'Poppins', sans-serif;
-    width: 600px;
-    height: 400px;
+  font-family: 'Poppins', sans-serif;
+  padding: 15px;
+  background-color: #0F1020; /* Fondo oscuro */
+  color: white;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 0;
+  color: #3772FF;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+p,
+strong,
+a,
+label,
+input {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Estilos del contenido principal */
+#popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#extension-body-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* Divs con bordes degradados */
+.step-container {
+  border: 4px solid;
+  border-image: linear-gradient(90deg, #3772FF, #3346AF) 1;
+  border-radius: 15px;
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#left-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#right-container {
+  border: 4px solid;
+  border-image: linear-gradient(90deg, #3346AF, #2F195F) 1;
+  border-radius: 15px;
+  padding: 20px 10px;
+}
+
+/* Estilos de la tabla de información */
+#playlist-info {
+  border-collapse: collapse;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#playlist-info table td {
+  padding: 8px;
+  border-bottom: 1px solid #2F195F; /* Separadores de la tabla */
+  color: #B0B3D6; /* Color del texto en la tabla */
+}
+
+/* Botones */
+button {
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #3772FF; /* Fondo azul intenso */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 35px;
+}
+
+button:hover {
+  background-color: #6d99ff; /* Cambio a color intermedio al hacer hover */
+}
+
+#reset-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#reset-button-container button {
+  padding: 0 80px;
+}
+
+#url-input {
+  height: 25px;
 }

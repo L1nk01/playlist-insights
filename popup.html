@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,60 @@
   <link rel="stylesheet" href="assets/stylesheets/styles.css">
   <script src="assets/src/popup.js" defer></script>
 </head>
+
 <body>
-  <div class="popup-content">
-    <h1>Playlist Insights</h1>
-    <p>Detailed information about Youtube playlists</p>
+  <section id="popup-content">
+    <div id="extension-title-container">
+      <h1>Playlist Insights</h1>
+    </div>
 
-    <h3>Step 1</h3>
-    <input type="text" id="url-input" name="url-input" placeholder="Playlist URL">
-    <p>Get the playlist url (or paste it)</p>
-    <button id="get-url-btn">Get URL</button>
+    <div id="extension-body-container">
+      <div id="left-container">
+        <div class="step-container">
+          <h3>Step 1</h3>
+          <label for="url-input">Get the playlist URL (or paste it)</label>
+          <input type="text" id="url-input" name="url-input" placeholder="Playlist URL">
+          <button id="get-url-btn">Get URL</button>
+        </div>
 
-    <h3>Step 2</h3>
-    <button click="get-info-btn">Click here!</button>
-  </div>
+        <div class="step-container">
+          <h3>Step 2</h3>
+          <button click="get-info-btn">Get Playlist Data</button>
+        </div>
+      </div>
+
+      <div id="right-container">
+        <div id="playlist-info">
+          <table>
+            <tr>
+              <td>Total playlist duration:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Average video duration:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Total videos in playlist:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Shortest video:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Longest video:</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="reset-button-container">
+      <button>Reset</button>
+    </div>
+  </section>
 </body>
+
 </html>

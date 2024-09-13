@@ -21,6 +21,7 @@
     "default_popup": "popup.html",
     "default_icon": {
       "16": "assets/icons/16.png",
+      "24": "assets/icons/24.png",
       "32": "assets/icons/32.png"
     }
   },
