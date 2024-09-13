@@ -1,8 +1,7 @@
-/* Estilos generales */
 body {
   font-family: 'Poppins', sans-serif;
   padding: 15px;
-  background-color: #0F1020; /* Fondo oscuro */
+  background-color: #0F1020;
   color: white;
 }
 
@@ -27,7 +26,6 @@ input {
   margin: 0;
 }
 
-/* Estilos del contenido principal */
 #popup-content {
   display: flex;
   flex-direction: column;
@@ -40,7 +38,6 @@ input {
   gap: 10px;
 }
 
-/* Divs con bordes degradados */
 .step-container {
   border: 4px solid;
   border-image: linear-gradient(90deg, #3772FF, #3346AF) 1;
@@ -65,7 +62,6 @@ input {
   padding: 20px 10px;
 }
 
-/* Estilos de la tabla de información */
 #playlist-info {
   border-collapse: collapse;
   height: 100%;
@@ -76,15 +72,14 @@ input {
 
 #playlist-info table td {
   padding: 8px;
-  border-bottom: 1px solid #2F195F; /* Separadores de la tabla */
-  color: #B0B3D6; /* Color del texto en la tabla */
+  border-bottom: 1px solid #2F195F;
+  color: #B0B3D6;
 }
 
-/* Botones */
 button {
   font-weight: bold;
   font-size: 1rem;
-  background-color: #3772FF; /* Fondo azul intenso */
+  background-color: #3772FF;
   color: white;
   border: none;
   border-radius: 5px;
@@ -93,7 +88,7 @@ button {
 }
 
 button:hover {
-  background-color: #6d99ff; /* Cambio a color intermedio al hacer hover */
+  background-color: #6d99ff;
 }
 
 #reset-button-container {
@@ -107,5 +102,11 @@ button:hover {
 }
 
 #url-input {
-  height: 25px;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+#url-input:focus {
+  outline: #3772FF 2px solid;
 }
