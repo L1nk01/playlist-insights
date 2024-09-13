@@ -38,16 +38,6 @@ input {
   gap: 10px;
 }
 
-.step-container {
-  border: 4px solid;
-  border-image: linear-gradient(90deg, #3772FF, #3346AF) 1;
-  border-radius: 15px;
-  padding: 15px 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 #left-container {
   height: 100%;
   display: flex;
@@ -76,6 +66,32 @@ input {
   color: #B0B3D6;
 }
 
+#reset-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#reset-button-container button {
+  padding: 0 80px;
+}
+
+.step-container {
+  border: 4px solid;
+  border-image: linear-gradient(90deg, #3772FF, #3346AF) 1;
+  border-radius: 15px;
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 button {
   font-weight: bold;
   font-size: 1rem;
@@ -91,22 +107,12 @@ button:hover {
   background-color: #6d99ff;
 }
 
-#reset-button-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-#reset-button-container button {
-  padding: 0 80px;
-}
-
-#url-input {
+input {
   border: none;
   border-radius: 5px;
   padding: 7px;
 }
 
-#url-input:focus {
+input:focus {
   outline: #3772FF 2px solid;
 }
