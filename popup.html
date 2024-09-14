@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playlist Insights</title>
+    <link rel="stylesheet" href="public/src/stylesheets/styles.css" />
+    <script src="public/src/popup.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Playlist Insights</title>
-  <link rel="stylesheet" href="assets/stylesheets/styles.css">
-  <script src="assets/src/popup.js" defer></script>
-</head>
+  <body>
+    <section id="popup-content">
+      <div id="extension-title-container">
+        <h1>Playlist Insights</h1>
+      </div>
 
-<body>
-  <section id="popup-content">
-    <div id="extension-title-container">
-      <h1>Playlist Insights</h1>
-    </div>
+      <div id="extension-body-container">
+        <div id="left-container">
+          <div class="step-container">
+            <h3>Step 1</h3>
+            <label for="url-input">Get the playlist URL (or paste it)</label>
+            <input
+              type="text"
+              id="url-input"
+              name="url-input"
+              placeholder="Playlist URL"
+            />
+            <button id="get-url-btn">Get URL</button>
+          </div>
 
-    <div id="extension-body-container">
-      <div id="left-container">
-        <div class="step-container">
-          <h3>Step 1</h3>
-          <label for="url-input">Get the playlist URL (or paste it)</label>
-          <input type="text" id="url-input" name="url-input" placeholder="Playlist URL">
-          <button id="get-url-btn">Get URL</button>
+          <div class="step-container">
+            <h3>Step 2</h3>
+            <button id="get-info-btn">Get Playlist Data</button>
+          </div>
         </div>
 
-        <div class="step-container">
-          <h3>Step 2</h3>
-          <button id="get-info-btn">Get Playlist Data</button>
+        <div id="right-container">
+          <div id="playlist-info">
+            <table>
+              <tr>
+                <td>Total playlist duration:</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Average video duration:</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Total videos in playlist:</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Shortest video:</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Longest video:</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
 
-      <div id="right-container">
-        <div id="playlist-info">
-          <table>
-            <tr>
-              <td>Total playlist duration:</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Average video duration:</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Total videos in playlist:</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Shortest video:</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Longest video:</td>
-              <td></td>
-            </tr>
-          </table>
-        </div>
+      <div id="reset-button-container">
+        <button id="reset-data-btn">Reset</button>
       </div>
-    </div>
-
-    <div id="reset-button-container">
-      <button id="reset-data-btn">Reset</button>
-    </div>
-  </section>
-</body>
-
+    </section>
+  </body>
 </html>
