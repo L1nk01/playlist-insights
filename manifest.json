@@ -6,7 +6,8 @@
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "*://www.youtube.com/*",
+        "*://youtube.com/*"
       ],
       "js": [
         "assets/src/main.js"
@@ -24,11 +25,6 @@
       "24": "assets/icons/24.png",
       "32": "assets/icons/32.png"
     }
-  },
-  "background": {
-    "scripts": [
-      "background.js"
-    ]
   },
   "permissions": [
     "tabs"
