@@ -18,6 +18,8 @@ function checkUrlType(url) {
     return 1; // Playlist URL
   } else if (path.startsWith('/watch') && params.has('list')) {
     return 2; // Playlist video URL
+  } else if (path.startsWith('/watch') && !params.has('list')) {
+    return 3; // YouTube video, not in a playlist
   } else {
     return 0; // Neither playlist nor playlist video
   }
@@ -26,13 +28,20 @@ function checkUrlType(url) {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "getVideoTimeElements") {
     let url = request.url;
+    let urlType = checkUrlType(url);
 
-    let videoTimeElements = getVideoTimeElements(url);
-    videoTimeElements = Array.from(videoTimeElements).map(element => element.innerText.trim());
+    if (urlType === 1 || urlType === 2) { // Playlist or playlist video
+      let videoTimeElements = getVideoTimeElements(url);
+      videoTimeElements = Array.from(videoTimeElements).map(element => element.innerText.trim());
 
-    sendResponse({
-      message: "URL processed",
-      videoTimeElements: videoTimeElements
-    });
+      sendResponse({
+        message: "URL processed",
+        videoTimeElements: videoTimeElements
+      });
+    } else {
+      sendResponse({
+        message: "URL IS NOT A VALID YOUTUBE PLAYLIST URL"
+      });
+    }
   }
 });

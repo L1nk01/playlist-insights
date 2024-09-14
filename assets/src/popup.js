@@ -20,7 +20,7 @@ buttons.getInfoBtn.addEventListener("click", () => {
     let activeTabId = tabs[0].id;
 
     chrome.tabs.sendMessage(activeTabId, { action: "getVideoTimeElements", url: urlValue }, (response) => {
-      if (chrome.runtime.lastError) {
+      if (chrome.runtime.lastError || response.message === "URL IS NOT A VALID YOUTUBE PLAYLIST URL") {
         alert("URL IS NOT A VALID YOUTUBE PLAYLIST URL");
         return;
       }
