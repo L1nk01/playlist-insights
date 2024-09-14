@@ -1,7 +1,11 @@
 {
   "manifest_version": 3,
   "version": "1.0",
-  "extension_id": "extension-id",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{b9b64c77-1ed0-4dfc-85d6-1e44d27b5b0a}"
+    }
+  },
   "name": "Playlist Insights",
   "description": "A browser extension that provides insights about video playlists.",
   "content_scripts": [
