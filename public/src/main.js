@@ -27,7 +27,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     let url = request.url;
     let urlType = checkUrlType(url);
 
-    if (urlType === 1 || urlType === 2) { // Playlist or playlist video
+    const validUrls = [1, 2]
+
+    if (validUrls.includes(urlType)) { // Playlist or playlist video
       let videoTimeElements = getVideoTimeElements(url);
       videoTimeElements = Array.from(videoTimeElements).map(element => element.innerText.trim());
 
