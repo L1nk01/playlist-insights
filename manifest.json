@@ -1,6 +1,7 @@
 {
   "manifest_version": 3,
   "version": "1.0",
+  "extension_id": "extension-id",
   "name": "Playlist Insights",
   "description": "A browser extension that provides insights about video playlists.",
   "content_scripts": [
