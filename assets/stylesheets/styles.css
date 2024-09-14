@@ -3,6 +3,7 @@ body {
   padding: 15px;
   background-color: #0F1020;
   color: white;
+  min-width: 550px;
 }
 
 h1 {
@@ -50,6 +51,7 @@ input {
   border-image: linear-gradient(90deg, #3346AF, #2F195F) 1;
   border-radius: 15px;
   padding: 20px 10px;
+  width: 300px;
 }
 
 #playlist-info {
