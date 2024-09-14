@@ -14,15 +14,12 @@ function checkUrlType(url) {
   let path = new URL(url).pathname;
   let params = new URL(url).searchParams;
 
-  if (path.startsWith('/playlist')) {
-    return 1; // Playlist URL
-  } else if (path.startsWith('/watch') && params.has('list')) {
-    return 2; // Playlist video URL
-  } else if (path.startsWith('/watch') && !params.has('list')) {
-    return 3; // YouTube video, not in a playlist
-  } else {
-    return 0; // Neither playlist nor playlist video
-  }
+  let urlType = path.startsWith('/playlist') ? 1 : 
+  path.startsWith('/watch') && params.has('list') ? 2 :
+  path.startsWith('/watch' && !params.has('list')) ? 3 :
+  0;
+
+  return urlType;
 }
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {

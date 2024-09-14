@@ -11,20 +11,20 @@
         "*://youtube.com/*"
       ],
       "js": [
-        "assets/src/main.js"
+        "public/src/main.js"
       ]
     }
   ],
 "icons": {
-    "48": "assets/icons/48.png",
-    "64": "assets/icons/64.png"
+    "48": "public/assets/icons/48.png",
+    "64": "public/assets/icons/64.png"
   },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "assets/icons/16.png",
-      "24": "assets/icons/24.png",
-      "32": "assets/icons/32.png"
+      "16": "public/assets/icons/16.png",
+      "24": "public/assets/icons/24.png",
+      "32": "public/assets/icons/32.png"
     }
   },
   "permissions": [
